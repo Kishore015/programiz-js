@@ -59,21 +59,21 @@ let res;
 
 // form.addEventListener('click', calculator);
 
-const form = document.getElementById('form');
+// const form = document.getElementById('form');
 
-const para = document.getElementById('para')
+// const para = document.getElementById('para')
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const num = parseInt(document.getElementById('num').value)
-    console.log(num)
-    res = Math.sqrt(num);
-    console.log(res)
-    para.innerHTML = `Root of given number is ${res}`;
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     const num = parseInt(document.getElementById('num').value)
+//     console.log(num)
+//     res = Math.sqrt(num);
+//     console.log(res)
+//     para.innerHTML = `Root of given number is ${res}`;
 
     
 
-});
+// });
 
 let var1 = 10; // a = 10
 
@@ -172,3 +172,29 @@ function printMessage(){
     return "Hello Kishore"
 }
 console.log(printMessage())
+
+    let str = 'Hi, I am kishore';
+    const ary = [];
+    const odd_numbers = [];
+    const even_numbers = [];
+
+     for(let i=0;i<1000;i++){
+        console.log(str); // printing string 1000 times
+        console.log(ary.push(i+1)) // adding 1 - 1000 in array
+    }
+
+    console.log(ary) // Added 1000 numbers in array
+
+    for(let f=0;f<ary.length;f++){
+        if(ary[f] % 2 == 0){
+            even_numbers.push(f)
+        } else{
+            odd_numbers.push(f);
+        }
+    }
+    console.log(even_numbers) // added odd numbers
+    console.log(odd_numbers) // added even numbers
+
+// showing number of clickings
+let count = 0;
+document.addEventListener('click', () => console.log(`You clicked ${++count} times`))
