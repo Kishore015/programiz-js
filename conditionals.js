@@ -103,3 +103,87 @@ if(user_input >=1){
         }
     }
 }
+
+// Print All Prime Numbers in an Interval
+const range1 = 100;
+const range2 = 1000;
+let prime = [];
+console.log(`Prime numbers between ${range1} and ${range2} are:`)
+
+// Looping from lower number to higher number
+for(let k = range1; k<range2; k++){
+    let flag = false;
+    // Looping from 2 to user input number
+    for(m=2; m<k; m++){
+        if(k % m == 0){
+            flag = true;
+            break;
+        }
+    }
+
+    // if number greater than 1 and not divisible by other numbers
+    if(k>1 && flag == false){
+        console.log(`Prime Number: ${k}`)
+        prime[k] = parseInt(''+k); // Adding prime numbers to array from 100-1000
+    }
+ 
+}
+
+// Filtering null values from array
+const listOfPrimes = prime.filter((el) => {
+    return el !== ''
+})
+console.log(listOfPrimes) //List of Prime Numbers
+
+console.log("Number of prime numbers between 100 and 100 are "+listOfPrimes.length)
+
+
+// Program to Find the Factorial of a Number
+let factNum = 10;
+let res = 1;
+if(factNum<0){
+    console.log('No factorials for a negative number')
+}
+
+if(factNum == 0){
+    console.log('Factorial for 0 is 1')
+}
+
+if(factNum > 0){
+    for(let fnum = 1; fnum <= factNum; fnum++){
+        res *= fnum;
+    }
+    console.log(`Factorial of a given number is ${res}`)
+}
+
+
+// Program to Display the Multiplication Table
+let mul_number = 10;
+
+for(let z=1;z<=10;z++){
+    let result = mul_number*z;
+    console.log(`${mul_number} * ${z} = ${result}`)
+}
+
+// Program to Print the Fibonacci Sequence
+// {0,1,1,2,3,5,7,13,21.......}
+let max_number = 10;
+let num1 = 0, num2 = 1, fibTerm;
+console.log(num1);
+console.log(num2);
+for(let i=1;i<=max_number;i++){
+    fibTerm = num1+num2;
+    console.log(fibTerm);
+    num1 = num2;
+    num2 = fibTerm;
+}
+
+// Program to Print the Fibonacci Sequence upto a certain number
+// let num3 = 0, num4=1, nextTerm = num3+num4;
+// while(nextTerm<max_number){
+//     console.log(nextTerm);
+//     num3 = num4;
+//     num4 = nextTerm;
+//     if(nextTerm == max_number)
+//     break;
+// }
