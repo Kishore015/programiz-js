@@ -179,11 +179,3 @@ for(let i=1;i<=max_number;i++){
 }
 
 // Program to Print the Fibonacci Sequence upto a certain number
-let num3 = 0, num4=1, nextTerm = num3+num4;
-while(nextTerm<max_number){
-    console.log(nextTerm);
-    num3 = num4;
-    num4 = nextTerm;
-    if(nextTerm == max_number)
-    break;
-}
