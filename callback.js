@@ -7,7 +7,7 @@ function sayHello() {
 }
 
 setTimeout(say, 3000); //asynchronous function
-sayHello()
+sayHello() // asynchronous function
 
 
 
