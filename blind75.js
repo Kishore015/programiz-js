@@ -11,3 +11,18 @@ var twoSum = function (nums, target) {
     }
     return null;
 };
+
+// Best time to sell a stock
+//https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/6027720/beats-100-video-explained-step-by-step-list-most-common-array-interview-problems/
+
+var maxProfit = function(prices) {
+    let minPrice = Number.MAX_VALUE;
+    let maxProfit = 0;
+    
+    for (let currentPrice of prices) {
+        minPrice = Math.min(currentPrice, minPrice);
+        maxProfit = Math.max(maxProfit, currentPrice - minPrice);
+    }
+    
+    return maxProfit;
+};
